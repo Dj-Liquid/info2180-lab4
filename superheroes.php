@@ -67,6 +67,11 @@ $superheroes = [
 
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
+  <li 
+    data-name="<?= htmlspecialchars($superhero['name']); ?>" 
+    data-biography="<?= htmlspecialchars($superhero['biography']); ?>"
+  >
+    <?= htmlspecialchars($superhero['alias']); ?>
+  </li>
 <?php endforeach; ?>
 </ul>
